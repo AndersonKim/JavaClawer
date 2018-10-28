@@ -38,11 +38,8 @@ public class ImageCrawlController {
         CrawlConfig config = new CrawlConfig();
         config.setUserAgentString("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0");
         config.setMaxDepthOfCrawling(5);
-//        Collection<BasicHeader> headers=new ArrayList<BasicHeader>();
-//        headers.add(new BasicHeader("",""));
-//        headers.add(new BasicHeader("",""));
-//        config.setDefaultHeaders(headers);
         config.setCrawlStorageFolder(rootFolder);
+        config.setPolitenessDelay(1000);
 
     /*
      * Since images are binary content, we need to set this parameter to
@@ -50,7 +47,7 @@ public class ImageCrawlController {
      */
         config.setIncludeBinaryContentInCrawling(true);
 
-        String[] crawlDomains = {"http://www.umei.cc/p/gaoqing/xiuren_VIP/20160726193407.htm"};
+        String[] crawlDomains = {"http://www.jsczc.com/liebiao.html"};
 
         PageFetcher pageFetcher = new PageFetcher(config);
         RobotstxtConfig robotstxtConfig = new RobotstxtConfig();

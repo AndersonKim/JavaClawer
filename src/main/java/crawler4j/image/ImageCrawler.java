@@ -28,7 +28,8 @@ public class ImageCrawler extends WebCrawler {
             ".*(\\.(css|js|mid|mp2|mp3|mp4|wav|avi|mov|mpeg|ram|m4v|pdf" +
                     "|rm|smil|wmv|swf|wma|zip|rar|gz))$");
 
-    private static final Pattern imgPatterns = Pattern.compile(".*(\\.(bmp|gif|jpe?g|png|tiff?))$");
+    //private static final Pattern imgPatterns = Pattern.compile(".*(\\.(bmp|gif|jpe?g|png|tiff?))$");
+    private static final Pattern imgPatterns = Pattern.compile(".*jpg");
 
     private static File storageFolder;
     private static String[] crawlDomains;
